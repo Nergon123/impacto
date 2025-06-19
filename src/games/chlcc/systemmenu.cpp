@@ -172,7 +172,7 @@ void SystemMenu::Render() {
                            glm::vec4(tint, TitleFade.Progress));
       Renderer->DrawSprite(MainMenuLabel, MainMenuLabelRightPosition,
                            glm::vec4(tint, TitleFade.Progress),
-                           glm::vec2(0.92f, 0.92f), MainMenuLabelRightAngle,
+                           glm::vec2(1.0f, 1.0f), MainMenuLabelRightAngle,
                            false);
       Renderer->DrawSprite(MenuItemsLine,
                            glm::vec2(MenuItemsLinePosition.x, yOffset));

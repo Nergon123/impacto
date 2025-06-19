@@ -14,15 +14,15 @@ root.SystemMenu = {
     TitleFadeOutDuration = 28 / 60,
 
     SystemMenuBackground = "SystemMenuBackground",
-    SystemMenuBackgroundPosition = {X = 93,Y = 0},
+    SystemMenuBackgroundPosition = {X = 94,Y = 0},
     SystemMenuItemsLine = "SystemMenuItemsLine",
-    SystemMenuItemsLinePosition = {X = 80,Y = 0},
+    SystemMenuItemsLinePosition = {X = 82,Y = 0},
     MainMenuLabel = "MainMenuLabel",
     MainMenuLabelPosition = {X=260, Y = 0},
-    MainMenuLabelRightPosition = {X=800, Y = 165},
-    MainMenuLabelRightAngle = -1.8,
+    MainMenuLabelRightPosition = {X=793, Y = 135},
+    MainMenuLabelRightAngle = -1.83,
     SystemMenuSelectionDot = "SystemMenuSelectionDot",
-    SystemMenuSelectionDotPosition = {X = 86, Y = 162},
+    SystemMenuSelectionDotPosition = {X = 87, Y = 162},
     SystemMenuSelectionDotMultiplier = 52,
     SystemMenuSelection = "SystemMenuSelection",
     SystemMenuSelectionPosition = {X = 93, Y = 73},
@@ -30,11 +30,11 @@ root.SystemMenu = {
     SystemSelectMenuHeaderPosition = {X = 96, Y = 50},
     SystemMenuRunningSelectedLabel = "SystemMenuRunningSelectedLabel",
     SystemMenuRunningSelectedLabelPosition = {X = 0,Y=112},
-    SystemMenuRunningSelectedLabelAngle = -0.27,
+    SystemMenuRunningSelectedLabelAngle = -0.268,
     SystemMenuButtonPrompt= "SystemMenuButtonPrompt",
     SystemMenuButtonPromptPosition = {X = 1022, Y = 651},
     SystemMenuLine="SystemMenuLine",
-    SystemMenuLinePosition = {X = 0, Y = 539},
+    SystemMenuLinePosition = {X = 0, Y = 538},
     SystemMenuCHLCCLabel = "SystemMenuCHLCCLabel",
     SystemMenuCHLCCLabelPosition = {X = 1068, Y = 575},
     MenuEntriesNum = 9,
@@ -48,11 +48,11 @@ root.SystemMenu = {
     ------
     FocusTint = 0xff9cb6,
     MenuEntriesPositions = {
-        {X = 110, Y = 107}, {X = 110, Y = 182},
-        {X = 110, Y = 233}, {X = 110, Y = 253},
-        {X = 110, Y = 304}, {X = 110, Y = 390},
-        {X = 110, Y = 428}, {X = 110, Y = 475},
-        {X = 110, Y = 499}
+        {X = 110, Y = 107}, {X = 110, Y = 180},
+        {X = 110, Y = 234}, {X = 110, Y = 254},
+        {X = 110, Y = 309}, {X = 110, Y = 379},
+        {X = 110, Y = 445}, {X = 110, Y = 479},
+        {X = 110, Y = 506}
     },
     MenuEntriesSprites = {},
 };
@@ -84,7 +84,7 @@ root.Sprites["SystemSelectMenuHeader"] = {
 
 root.Sprites["SystemMenuButtonPrompt"] = {
     Sheet = "Main",
-    Bounds = {X = 1790, Y = 723, Width = 258, Height = 28}
+    Bounds = {X = 1789, Y = 723, Width = 258, Height = 28}
 };
 
 root.Sprites["SystemMenuSelection"] = {
@@ -94,17 +94,17 @@ root.Sprites["SystemMenuSelection"] = {
 
 root.Sprites["SystemMenuSelectionDot"] = {
     Sheet = "Main",
-    Bounds = {X = 512, Y = 550, Width = 14, Height = 14}
+    Bounds = {X = 511, Y = 550, Width = 14, Height = 14}
 };
 
 root.Sprites["SystemMenuLine"] = {
     Sheet = "Main",
-    Bounds = {X = 768, Y = 913, Width = 1280, Height = 109}
+    Bounds = {X = 767, Y = 913, Width = 1280, Height = 109}
 };
 
 root.Sprites["SystemMenuCHLCCLabel"] = {
     Sheet = "Main",
-    Bounds = {X = 508, Y = 471, Width = 131, Height = 71}
+    Bounds = {X = 507, Y = 471, Width = 131, Height = 71}
 };
 
 root.Sprites["SystemMenuCircle"] = {
