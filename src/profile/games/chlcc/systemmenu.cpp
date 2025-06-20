@@ -62,6 +62,7 @@ void Configure() {
   MenuCHLCCLabel = EnsureGetMember<Sprite>("SystemMenuCHLCCLabel");
   MenuCHLCCLabelPosition =
       EnsureGetMember<glm::vec2>("SystemMenuCHLCCLabelPosition");
+  SelectedLabelSpeed = EnsureGetMember<float>("MenuSelectedLabelSpeed");
 
   auto drawType = Game::DrawComponentType::_from_integral_unchecked(
       EnsureGetMember<int>("DrawType"));

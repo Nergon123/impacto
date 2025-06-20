@@ -159,6 +159,9 @@ void SystemMenu::Render() {
                                      MenuSelectionDotMultiplier +
                                  MenuRunningSelectedLabelPosition.y);
       }
+
+      // TODO Make Proper Animations (copy from other menu?)
+
       Renderer->DrawSprite(MenuLine, MenuLinePosition,
                            glm::vec4(tint, TitleFade.Progress));
       Renderer->DrawSprite(MenuButtonPrompt, MenuButtonPromptPosition,
@@ -202,8 +205,7 @@ void SystemMenu::Render() {
 }
 
 inline void SystemMenu::UpdateRunningSelectedLabel(float dt) {
-  const float selectedLabelSpeed = -500.0f;  // TODO Parse from lua file
-  currentRunningPosition += selectedLabelSpeed * dt;
+  currentRunningPosition += SelectedLabelSpeed * dt;
   if (glm::abs(currentRunningPosition) >=
       MenuRunningSelectedLabel.Bounds.Width) {
     currentRunningPosition = MenuRunningSelectedLabel.Bounds.Width -
@@ -212,7 +214,8 @@ inline void SystemMenu::UpdateRunningSelectedLabel(float dt) {
 }
 inline void SystemMenu::DrawRunningSelectedLabel(float offsetY) {
   float x = 0;
-  for (int i = 0; i < (1280 / MenuRunningSelectedLabel.Bounds.Width) + 1; i++) {
+  for (int i = -1; i < (1280 / MenuRunningSelectedLabel.Bounds.Width) + 1;
+       i++) {
     x = (i * (MenuRunningSelectedLabel.Bounds.Width - 3) +
          currentRunningPosition);
     Renderer->DrawSprite(

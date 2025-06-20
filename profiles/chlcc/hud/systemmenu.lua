@@ -37,6 +37,7 @@ root.SystemMenu = {
     SystemMenuLinePosition = {X = 0, Y = 538},
     SystemMenuCHLCCLabel = "SystemMenuCHLCCLabel",
     SystemMenuCHLCCLabelPosition = {X = 1068, Y = 575},
+    MenuSelectedLabelSpeed = -400,
     MenuEntriesNum = 9,
     MenuEntriesHNum = 0,
     ------

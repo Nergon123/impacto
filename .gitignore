@@ -297,3 +297,4 @@ games/*/trophydata
 /CPackConfig.cmake
 /CPackSourceConfig.cmake
 /impacto
+/profile.txt

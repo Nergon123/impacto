@@ -46,7 +46,7 @@ inline Sprite MenuLine;
 inline glm::vec2 MenuLinePosition;
 inline Sprite MenuCHLCCLabel;
 inline glm::vec2 MenuCHLCCLabelPosition;
-
+inline float SelectedLabelSpeed;
 void Configure();
 
 }  // namespace SystemMenu
