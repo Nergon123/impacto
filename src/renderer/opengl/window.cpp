@@ -40,10 +40,6 @@ void GLWindow::UpdateDimensions() {
   SDL_GetWindowSize(SDLWindow, &osWindowWidth, &osWindowHeight);
   DpiScaleX = (float)WindowWidth / (float)osWindowWidth;
   DpiScaleY = (float)WindowHeight / (float)osWindowHeight;
-
-  // Commented because its makes CPU load high with constant
-  // requests to focus window in KDE X11
-  // Making my computer unusable
   // SDL_SetWindowInputFocus(SDLWindow);
 }
 

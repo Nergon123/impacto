@@ -53,15 +53,6 @@ SystemMenu::SystemMenu() {
                                                     FDIR_DOWN);
 }
 
-int SystemMenu::GetIndexOfActiveButton() {
-  for (int i = 0; i < MenuEntriesNum; i++) {
-    if (SystemMenu::MainItems->Children[i]->HasFocus) {
-      return i;
-    }
-  }
-  return -1;
-}
-
 void SystemMenu::Show() {
   if (State != Shown) {
     State = Showing;
@@ -128,8 +119,11 @@ void SystemMenu::Update(float dt) {
 
 void SystemMenu::Render() {
   if (State != Hidden) {
-    int indexOfActiveButton = GetIndexOfActiveButton();
-
+    auto* btn = static_cast<Widgets::Button*>(CurrentlyFocusedElement);
+    int indexOfActiveButton = 0;
+    if (btn) {
+      indexOfActiveButton = btn->Id;
+    }
     if (MenuTransition.IsIn()) {
       Renderer->DrawRect(RectF(0.0f, 0.0f, 1280.0f, 720.0f),
                          RgbIntToFloat(BackgroundColor));
@@ -205,11 +199,11 @@ void SystemMenu::Render() {
 }
 
 inline void SystemMenu::UpdateRunningSelectedLabel(float dt) {
-  currentRunningPosition += SelectedLabelSpeed * dt;
-  if (glm::abs(currentRunningPosition) >=
+  CurrentRunningPosition += SelectedLabelSpeed * dt;
+  if (glm::abs(CurrentRunningPosition) >=
       MenuRunningSelectedLabel.Bounds.Width) {
-    currentRunningPosition = MenuRunningSelectedLabel.Bounds.Width -
-                             glm::abs(currentRunningPosition);
+    CurrentRunningPosition = MenuRunningSelectedLabel.Bounds.Width -
+                             glm::abs(CurrentRunningPosition);
   }
 }
 inline void SystemMenu::DrawRunningSelectedLabel(float offsetY) {
@@ -217,7 +211,7 @@ inline void SystemMenu::DrawRunningSelectedLabel(float offsetY) {
   for (int i = -1; i < (1280 / MenuRunningSelectedLabel.Bounds.Width) + 1;
        i++) {
     x = (i * (MenuRunningSelectedLabel.Bounds.Width - 3) +
-         currentRunningPosition);
+         CurrentRunningPosition);
     Renderer->DrawSprite(
         MenuRunningSelectedLabel,
         glm::vec2(x, x * MenuRunningSelectedLabelAngle + offsetY));

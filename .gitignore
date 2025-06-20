@@ -288,13 +288,7 @@ games/*/gamedata
 games/*/savedata
 games/*/trophydata
 
-# Compiled Files
-/_deps
-/CMakeFiles
 /shaders
 /vendor/LibAtrac9
-/CMakeCache.txt
-/CPackConfig.cmake
-/CPackSourceConfig.cmake
 /impacto
 /profile.txt

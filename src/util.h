@@ -333,12 +333,7 @@ T UnalignedRead(void* ptr) {
 
 template <typename T>
 void UnalignedWrite(void* ptr, T value) {
-#if __cplusplus >= 202002L  // Suppress deprecated warning in C++20+
-  static_assert(std::is_standard_layout<T>::value && std::is_trivial<T>::value,
-                "!std::is_pod<T>");
-#else
   static_assert(std::is_pod<T>::value, "!std::is_pod<T>");
-#endif
   memcpy(ptr, &value, sizeof value);
 }
 
